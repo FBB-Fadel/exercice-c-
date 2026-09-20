@@ -1,7 +1,28 @@
-﻿var compte1 = new Compte("FR001", "Alice", 1000m);
+﻿var compteCourant = new CompteCourant(
+    "CC001",
+    "Alice",
+    1000m
+);
 
-var compte2 = compte1;
+var compteEpargne = new CompteEpargne(
+    "CE001",
+    "Bob",
+    2000m,
+    2.5m
+);
 
-compte2.Crediter(500m);
+// Compte courant
+Console.WriteLine("Compte courant");
+Console.WriteLine($"Numéro : {compteCourant.Numero}");
+Console.WriteLine($"Titulaire : {compteCourant.Titulaire}");
+Console.WriteLine($"Solde : {compteCourant.Solde} €");
 
-Console.WriteLine(compte1.Solde);
+Console.WriteLine();
+
+// Compte épargne
+Console.WriteLine("Compte épargne");
+Console.WriteLine($"Numéro : {compteEpargne.Numero}");
+Console.WriteLine($"Titulaire : {compteEpargne.Titulaire}");
+Console.WriteLine($"Solde : {compteEpargne.Solde} €");
+Console.WriteLine($"Taux d'intérêt : {compteEpargne.TauxInteret} %");
+
