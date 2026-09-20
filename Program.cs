@@ -1,9 +1,18 @@
-﻿Compte compte = new Compte("FR123456", 1000m);
+﻿
+var compte1 = new Compte("FR001", "Alice");
 
-Console.WriteLine($"Numéro : {compte.Numero}");
-Console.WriteLine($"Solde initial : {compte.Solde} €");
+var compte2 = new Compte("FR002", "Bob", 500m);
 
-compte.Crediter(200m);
-compte.Debiter(50m);
+///Affichage des information
+Console.WriteLine($"Numéro : {compte1.Numero}");
+Console.WriteLine($"Titulaire : {compte1.Titulaire}");
+Console.WriteLine($"Solde : {compte1.Solde}€");
+Console.WriteLine($"Nouveau Solde : {compte1.Solde}€");
 
-Console.WriteLine($"Nouveau solde : {compte.Solde} €");
+///Affichage des information 2eme compte
+Console.WriteLine();
+Console.WriteLine("Compte 2");
+Console.WriteLine($"Numéro : {compte2.Numero}");
+Console.WriteLine($"Titulaire : {compte2.Titulaire}");
+Console.WriteLine($"Solde : {compte2.Solde}€");
+Console.WriteLine($"Nouveau Solde : {compte2.Solde}€");
